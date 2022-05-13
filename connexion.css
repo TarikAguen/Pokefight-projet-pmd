@@ -1,0 +1,61 @@
+body{
+    background-color: black;
+}
+
+.adresse{
+    font-family: 'Press Start 2P';
+    color: white;
+}
+
+.boardConnexion{
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+
+}
+
+.btn{
+    text-align: center;
+}
+
+.seconnecter{
+    background-color: black;
+    border: none;
+    color: red;
+    font-family: 'Press Start 2P';
+    cursor: pointer;
+    
+    
+}
+
+#email{
+    background-color: black;
+    border: none;
+    color: white;
+    font-family: 'Press Start 2P';
+    cursor: pointer;
+}
+
+#mdp{
+    background-color: black;
+    border: none;
+    color: white;
+    font-family: 'Press Start 2P';
+    cursor: pointer; 
+}
+
+.logoCont{
+    margin-top: 10%;
+}
+
+input#email{
+    height: 30px;
+   
+
+}
+
+input#mdp{
+    height: 30px;
+}
+
+
