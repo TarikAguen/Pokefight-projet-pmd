@@ -1,7 +1,15 @@
 <?php
+<<<<<<< Updated upstream
 // include('index.php');
 
 
+=======
+
+// Je me connecte à la base de données : 
+$pdo = new PDO('mysql:host=localhost;dbname=pokefight', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+
+// var_dump($pdo);
+>>>>>>> Stashed changes
 // Si la session membre existe, alors je redirige vers l'accueil :
 if (isset($_SESSION['user'])) {
   header('location:./profil.php');
@@ -13,7 +21,11 @@ if ($_POST) {
   // var_dump($_POST);
 
   // Je récupère les infos correspondants à l'email dans la table :
+<<<<<<< Updated upstream
   $r = $pdo->query("SELECT * FROM user WHERE email = '$_POST[email]'");
+=======
+  $r = $pdo->query("SELECT id_user, pseudo, email, mdp FROM user WHERE email = '$_POST[email]'");
+>>>>>>> Stashed changes
 
   // Si le nombre de résultat est plus grand ou égal à 1, alors le compte existe :
   if ($r->rowCount() >= 1) {
@@ -32,7 +44,11 @@ if ($_POST) {
       $_SESSION['user']['id_user'] = $user['id_user'];
 
       // Je redirige l'utilisateur vers la page d'accueil :
+<<<<<<< Updated upstream
       header('location:../profil/test.php');
+=======
+      header('location:profil.php');
+>>>>>>> Stashed changes
     } else {
       // Le mot de passe est incorrect :
       $content .= '<p>Mot de passe incorrect.</p>';
@@ -49,7 +65,11 @@ if ($_POST) {
 
 <head>
   <title>Connexion</title>
+<<<<<<< Updated upstream
   <link href="./connexion/connexion.css" rel="stylesheet">
+=======
+  <link href="./connexion.css" rel="stylesheet">
+>>>>>>> Stashed changes
 
   <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27');
@@ -59,11 +79,19 @@ if ($_POST) {
 
 <body>
 
+<<<<<<< Updated upstream
 <div class="musique"> <img src=img/musique.gif></div>
 
 
 <div class="logoCont">
   <img src="img/logo.svg" alt="logo">
+=======
+<img src="./images/BeagleBros-Note.png" class="music" alt="">
+
+
+<div class="logoCont">
+  <img src="./images/pokefight-logo.svg" alt="logo">
+>>>>>>> Stashed changes
 </div>
 
 
@@ -74,6 +102,7 @@ if ($_POST) {
       <form method="post">
         <div class="adresse">
 
+<<<<<<< Updated upstream
             <label for="email">Adresse mail:</label>
             <input type="email" name="email" id="email" required>
             
@@ -90,11 +119,35 @@ if ($_POST) {
         <div class="btn">
             <input type="submit" class="seconnecter" value="Next">
         </div>
+=======
+            <label for="email">Email</Address>:</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+
+        
+        <div class="adresse">
+            <label for="mdp">Password</label>
+            <input type="password" name="mdp" id="mdp" required>
+            
+        </div>
+        <div class="createAccount">
+          <a href="./inscription.php" class="createAccount">create an account</a>
+        </div>
+        <div class="btn">
+            <input type="submit" class="seconnecter" value="Next">
+        </div>
+
+>>>>>>> Stashed changes
     </div>
     </form>
   </div>
 
 
 </body>
+<<<<<<< Updated upstream
+=======
+  <script src="./audio.js"></script>
+>>>>>>> Stashed changes
 
 </html>

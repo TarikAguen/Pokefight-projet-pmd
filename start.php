@@ -17,9 +17,8 @@
     <div class="background">
         <img src="images/pokefight-logo.svg" alt="Logo pokefight" class="logo">
         
-        <p class="text"class="text_1">PRESS R START</p>
-        <br>
-        <P class="text">EXIT</P>
+        <a href="./inscription.php" class="text">PRESS HERE TO START</a>
+        
     </div>
 
 </body>
