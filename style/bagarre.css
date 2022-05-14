@@ -5,12 +5,13 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: rgb(0, 0, 0);
+  overflow: hidden;
 }
 
 .battleBoard {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: 70%;
+  width: 1900px;
   background-image: url(../images/fondBattle.png);
   background-repeat: no-repeat;
   border-radius: 30px;
@@ -23,17 +24,19 @@ body {
   position: absolute;
   width: 90px;
   height: 90px;
-  bottom: 270px;
-  left: 50px;
-
+  top: 60%;
+  left: 20%;
   background-color: red;
+  display: flex;
+  justify-content: left;
 }
 .enemyCharacter {
   position: absolute;
   width: 90px;
   height: 90px;
-  bottom: 270px;
-  right: 50px;
+  top: 60%;
+  left: 75%;
+
   background-color: black;
 }
 
