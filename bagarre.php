@@ -72,66 +72,6 @@ try {
     <link href="./style/reset.css" rel="stylesheet">
     <link href="/style/bagarre.css" rel="stylesheet">
     <title>Bagarre</title>
-    <!-- <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100vw;
-            background-color: rgb(0, 0, 0);
-        }
-
-        .battleBoard {
-            position: relative;
-            height: 100vh;
-            width: 100vw;
-            background-image: url(../images/fondBattle.png);
-            background-repeat: no-repeat;
-            border-radius: 30px;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .playerCharacter {
-            position: absolute;
-            width: 90px;
-            height: 90px;
-            bottom: 270px;
-            left: 50px;
-            /* animation: movePlayer 2sec 1 alternate; */
-
-            background-color: red;
-        }
-
-        .enemyCharacter {
-            position: absolute;
-            width: 90px;
-            height: 90px;
-            bottom: 270px;
-            right: 50px;
-            /* animation: moveEnemy 1sec 1 alternate; */
-            background-color: black;
-        }
-
-        .start {
-            position: absolute;
-            width: 200px;
-            height: 50px;
-            top: 50%;
-            left: 50%;
-        }
-
-        .timer {
-            position: absolute;
-            bottom: 20;
-            right: 50;
-            color: aliceblue;
-            font-size: 50px;
-            text-align: center;
-        }
-    </style> -->
 </head>
 
 <body>

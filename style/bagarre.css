@@ -25,7 +25,6 @@ body {
   height: 90px;
   bottom: 270px;
   left: 50px;
-  /* animation: movePlayer 2sec 1 alternate; */
 
   background-color: red;
 }
@@ -35,7 +34,6 @@ body {
   height: 90px;
   bottom: 270px;
   right: 50px;
-  /* animation: moveEnemy 1sec 1 alternate; */
   background-color: black;
 }
 
@@ -46,24 +44,6 @@ body {
   top: 50%;
   left: 50%;
 }
-/* 
-@keyframes movePlayer {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 80;
-  }
-}
-
-@keyframes moveEnemy {
-  0% {
-    left: 0;
-  }
-  100% {
-    right: 80;
-  }
-} */
 
 .timer {
   position: absolute;
