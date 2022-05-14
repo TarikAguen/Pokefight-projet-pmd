@@ -1,17 +1,27 @@
 <?php
 
 // Je me connecte à la base de données : 
+<<<<<<< Updated upstream
 $pdo = new PDO('mysql:host=localhost;dbname=pokefight', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+=======
+$pdo = new PDO('mysql:host=localhost;dbname=pokefight', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+>>>>>>> Stashed changes
 
 // var_dump($pdo);
 
 
 // J'ouvre une session pour y stocker des infos
 //session_start();
+<<<<<<< Updated upstream
 if (!isset($_SESSION)) {
   session_start();
 }
 var_dump($_SESSION);
+=======
+// if (!isset($_SESSION)) {
+//   session_start();
+// }
+>>>>>>> Stashed changes
 
 // S'il y a une action dans l'URL et si cette action est égal à deconnexion, alors je détruit la session :
 if (isset($_GET['action']) && $_GET['action'] == 'deconnexion') {
@@ -80,6 +90,7 @@ if ($_POST) {
   if (empty($erreur)) {
     // J'envois les infos dans la table en BDD :
     $pdo->exec("INSERT INTO user (pseudo, email, mdp) VALUES ('$_POST[pseudo]', '$_POST[email]', '$_POST[mdp]')");
+<<<<<<< Updated upstream
     // J'ajoute un message de validation :
     $content .= '<p>Inscription validée !</p>';
   }
@@ -93,12 +104,27 @@ if ($_POST) {
 
 
   
+=======
+    $createdId = $pdo->lastInsertId();
+    // J'ajoute un message de validation :
+    $content .= '<p>Inscription validée !</p>';
+    $_SESSION['pseudo'] = $_POST['pseudo'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['id_user'] = $createdId;
+  }
+
+
+  header('location:profil.php');
+  // J'ajoute le contenu de $erreur à l'interieur de $content :
+  $content .= $erreur;
+>>>>>>> Stashed changes
 }
 
 ?>
 
 
 
+<<<<<<< Updated upstream
 
 
 
@@ -149,6 +175,8 @@ if ($_POST) {
 
 
 
+=======
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 
@@ -156,9 +184,17 @@ if ($_POST) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
   <link href="./inscription/inscription.css" rel="stylesheet">
   <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27');
+=======
+  <link href="./reset.css" rel="stylesheet">
+  <link href="./inscription.css" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27');
+>>>>>>> Stashed changes
   </style>
   <script src="./main.js"></script>
   <title>Inscription</title>
@@ -166,41 +202,74 @@ if ($_POST) {
 
 <body>
 
+<<<<<<< Updated upstream
 <div class="logoCont">
   <img src="img/logo.svg" alt="logo">
 </div>
+=======
+  <div class="logoCont">
+    <img src="./images/pokefight-logo.svg" alt="logo">
+  </div>
+>>>>>>> Stashed changes
 
   <div class="formContainer">
     <form method="post">
 
       <div class="Pseudo">
+<<<<<<< Updated upstream
           <label for="pseudo">Pseudo</label>
           <input type="text" name="pseudo" id="pseudo" minlength="3" maxlength="20" required>
+=======
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="pseudo" id="pseudo" minlength="3" maxlength="20" required>
+>>>>>>> Stashed changes
       </div>
       <br><br>
 
       <div class="Pseudo">
+<<<<<<< Updated upstream
           <label for="email">Adresse mail</label>
           <input type="email" name="email" id="email" required>
+=======
+        <label for="email">Adresse mail</label>
+        <input type="email" name="email" id="email" required>
+>>>>>>> Stashed changes
       </div>
       <br><br>
 
       <div class="Pseudo">
+<<<<<<< Updated upstream
           <label for="mdp">Mot de passe</label>
           <input type="mdp" name="mdp" id="mdp" required>
+=======
+        <label for="mdp">Mot de passe</label>
+        <input type="mdp" name="mdp" id="mdp" required>
+>>>>>>> Stashed changes
       </div>
       <br><br>
 
       <div class=btn>
+<<<<<<< Updated upstream
           <input type="submit" class="seconnecter" value="Next">
+=======
+        <input type="submit" class="seconnecter" value="Next">
+>>>>>>> Stashed changes
       </div>
 
     </form>
   </div>
 
   <div class="dejaInscris">
+<<<<<<< Updated upstream
       <a class="memberConnexion" href="connexion.php">Déjà inscrit ?</a>
   </div>
 </body>
 
 </html>
+=======
+    <a class="memberConnexion" href="connexion.php">Déjà inscrit ?</a>
+  </div>
+</body>
+
+</html>
+>>>>>>> Stashed changes
