@@ -102,40 +102,15 @@ section {
   display: block;
 }
 body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* FIN RESET */
-
-body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .background {
   background-image: url("images/pokefight-bg.svg");
+  animation: myAnim 7s linear 1s infinite alternate forwards;
   width: 100vw;
   height: 100vh;
   text-align: center;
@@ -145,7 +120,7 @@ body {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  gap: 1.25rem;
+  overflow: hidden;
 }
 
 .logo {
@@ -248,4 +223,14 @@ tr {
   color: white;
   font-size: 25px;
   font-family: "Press Start 2P", cursive;
+}
+
+@keyframes myAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
 }

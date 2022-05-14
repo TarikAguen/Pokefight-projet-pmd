@@ -1,66 +1,3 @@
-<<<<<<< Updated upstream
-body{
-    background-color: black;
-}
-
-.adresse{
-    font-family: 'Press Start 2P';
-    color: white;
-}
-
-.boardConnexion{
-    display: flex;
-    justify-content: center;
-    padding-top: 90px;
-
-}
-
-.btn{
-    text-align: center;
-}
-
-.seconnecter{
-    background-color: black;
-    border: none;
-    color: red;
-    font-family: 'Press Start 2P';
-    cursor: pointer;
-    
-    
-}
-
-#email{
-    background-color: black;
-    border: none;
-    color: white;
-    font-family: 'Press Start 2P';
-    cursor: pointer;
-}
-
-#mdp{
-    background-color: black;
-    border: none;
-    color: white;
-    font-family: 'Press Start 2P';
-    cursor: pointer; 
-}
-
-.logoCont{
-    margin-top: 10%;
-}
-
-input#email{
-    height: 30px;
-   
-
-}
-
-input#mdp{
-    height: 30px;
-}
-
-
-=======
 body {
   background-color: black;
 }
@@ -70,7 +7,7 @@ body {
   color: white;
 }
 
-.boardConnexion {
+.boardConnexion2 {
   display: flex;
   justify-content: center;
   padding-top: 90px;
@@ -87,6 +24,19 @@ body {
   color: red;
   font-family: "Press Start 2P";
   cursor: pointer;
+}
+
+.logoCont {
+  margin-top: 10%;
+  text-align: center;
+}
+
+input#email {
+  height: 30px;
+}
+
+input#mdp {
+  height: 30px;
 }
 
 #email {
@@ -111,19 +61,15 @@ body {
   text-align: center;
 }
 
-input#email {
-  height: 30px;
-}
-
-input#mdp {
-  height: 30px;
-}
-
 .createAccount {
   font-family: "Press Start 2P";
   color: white;
   text-decoration: none;
-  padding-top: 30px;
+  padding-top: 90px;
   text-align: center;
 }
->>>>>>> Stashed changes
+
+.music {
+  width: 50px;
+  height: 50px;
+}

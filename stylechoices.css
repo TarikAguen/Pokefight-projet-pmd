@@ -150,8 +150,15 @@ h1 {
   font-size: 32px;
   color: white;
   display: table-cell;
-	vertical-align: middle;
-  
+  vertical-align: middle;
+}
+
+.namePkm {
+  font-family: "Press Start 2P", cursive;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .ChoicesStarter {
@@ -176,12 +183,11 @@ h1 {
   flex-direction: row;
 }
 
-.pokemon{
-  padding: 50px; 
+.pokemon {
+  padding: 50px;
   display: flex;
   flex-direction: column;
 }
-
 
 .statCont {
   color: white;
@@ -192,14 +198,14 @@ h1 {
   gap: 5px;
 }
 
-.Img{
-  border: 6px white ;
-  border-style: dashed; 
+.Img {
+  border: 6px white;
+  border-style: dashed;
   border-radius: 5px;
 }
 
-.Img:hover{
-  border: 6px red ;
-  border-style: dashed; 
+.Img:hover {
+  border: 6px red;
+  border-style: dashed;
   border-radius: 5px;
 }
