@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body{
     background-color: black;
 }
@@ -59,3 +60,70 @@ input#mdp{
 }
 
 
+=======
+body {
+  background-color: black;
+}
+
+.adresse {
+  font-family: "Press Start 2P";
+  color: white;
+}
+
+.boardConnexion {
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+.btn {
+  text-align: center;
+  padding-top: 30%;
+}
+
+.seconnecter {
+  background-color: black;
+  border: none;
+  color: red;
+  font-family: "Press Start 2P";
+  cursor: pointer;
+}
+
+#email {
+  background-color: black;
+  border: none;
+  color: white;
+  font-family: "Press Start 2P";
+  cursor: pointer;
+  padding-bottom: 30px;
+}
+
+#mdp {
+  background-color: black;
+  border: none;
+  color: white;
+  font-family: "Press Start 2P";
+  cursor: pointer;
+}
+
+.logoCont {
+  margin-top: 10%;
+  text-align: center;
+}
+
+input#email {
+  height: 30px;
+}
+
+input#mdp {
+  height: 30px;
+}
+
+.createAccount {
+  font-family: "Press Start 2P";
+  color: white;
+  text-decoration: none;
+  padding-top: 30px;
+  text-align: center;
+}
+>>>>>>> Stashed changes
