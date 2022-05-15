@@ -6,6 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .logoCont {
@@ -24,6 +25,7 @@ body {
 }
 
 .btn {
+  padding-top: 10%;
   text-align: center;
 }
 
@@ -66,6 +68,7 @@ body {
 }
 
 .dejaInscris {
+  padding-top: 10%;
   text-align: center;
 }
 
@@ -85,4 +88,16 @@ input#email {
 
 input#mdp {
   height: 30px;
+}
+
+#playPauseBTN {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: none;
+  font-size: 10px;
+  color: white;
+  border: none;
+  font-family: "Press Start 2P";
+  cursor: pointer;
 }

@@ -73,3 +73,12 @@ input#mdp {
   width: 50px;
   height: 50px;
 }
+
+#playPauseBTN {
+  background: none;
+  font-size: 10px;
+  color: white;
+  border: none;
+  font-family: "Press Start 2P";
+  cursor: pointer;
+}

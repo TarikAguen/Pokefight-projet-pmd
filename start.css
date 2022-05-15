@@ -110,7 +110,7 @@ body {
 
 .background {
   background-image: url("images/pokefight-bg.svg");
-  animation: myAnim 7s linear 1s infinite alternate forwards;
+  animation: terrain_animation 75s linear infinite;
   width: 100vw;
   height: 100vh;
   text-align: center;
@@ -119,7 +119,6 @@ body {
   align-items: center;
   background-size: cover;
   background-position: top;
-  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -225,12 +224,23 @@ tr {
   font-family: "Press Start 2P", cursive;
 }
 
-@keyframes myAnim {
-  0% {
-    background-position: 0% 50%;
-  }
+#playPauseBTN {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: none;
+  font-size: 10px;
+  color: white;
+  border: none;
+  font-family: "Press Start 2P";
+  cursor: pointer;
+}
 
+@keyframes terrain_animation {
+  0% {
+    background-position: 0 0;
+  }
   100% {
-    background-position: 100% 50%;
+    background-position: -2572px 0;
   }
 }

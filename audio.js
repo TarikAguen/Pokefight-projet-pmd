@@ -1,8 +1,15 @@
-const music = document.querySelector(".music");
-const audio = new Audio("./audio/pokemonaccueil.mp3");
+let audio = document.querySelector(".audio");
+let playPauseBTN = document.querySelector(".playPauseBTN");
+let count = 0;
 
-music.addEventListener("click", () => {
-  audio.volume = 1;
-  audio.loop = true;
-  audio.play();
-});
+function playPause() {
+  if (count == 0) {
+    count = 1;
+    audio.play();
+    playPauseBTN.innerHTML = "Pause";
+  } else {
+    count = 0;
+    audio.pause();
+    playPauseBTN.innerHTML = "Listen";
+  }
+}

@@ -8,10 +8,10 @@ $dbname = 'pokefight';
 $username = 'root';
 $password = '';
 // $membre['profil_ami'] = 0;
-
 $valuePkmId = $_GET['value'];
 // echo $valuePkmId;
 if (isset($_GET['value'])) {
+  setCookie('pokemonChosen', $_GET['value'], time() + 3600, '/');
   $valuePkmId = $_GET['value'];
   // echo $valuePkmId;
 }
@@ -71,6 +71,9 @@ try {
 </head>
 
 <body>
+  <img src="./images/pokefight-logo.svg" alt="">
+  <a href="./classement.php" class="ranking"><img src="./images/Capture_d_Acran_2022-05-10_A__11.42.05-removebg-preview.png" width="100px" height="100px" alt=""></a>
+
   <div class="myPokemon">
     <?php
     if ($valuePkmId == 1) {
@@ -109,7 +112,7 @@ try {
   <br>
   <div class="winCompteur"> WIN :</div>
 
-  <a href="./bagarre.php\$_SESSION['id_user']'" id="start" class="start">Start a game </a>
+  <a href="./waiting.php" id="start" class="start">Start a game </a>
 
   <!-- <li><a href=\'' . $_SESSION['id'] . '\'>Mon profil</a></li> -->
 

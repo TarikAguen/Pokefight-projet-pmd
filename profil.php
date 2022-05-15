@@ -63,15 +63,23 @@ try {
 </head>
 
 <body>
+  <div class=audioCont> <audio id="audio">
+      <source src="./song/ost.mp3" type="audio/mpeg">
+    </audio>
+    <button id="playPauseBTN" onclick="playPause()">Listen</button>
+  </div>
 
-  <h1 class="welcome"><?php echo $_SESSION['pseudo'] ?> Choose your starter:</h1>
+
+
+
+  <h1 class="welcome">
+    <?php echo $_SESSION['pseudo'] ?> Choose your starter:</h1>
 
   <div class="choicesStarter">
     <div class="firstRow">
       <div class="pokemon">
         <div class="Img"><a href='./inventory.php?value=1'><img src="./gif-sprite/ronflexStarter.svg" alt=""></a></div>
         <div class="statCont">
-          <div class="namePkm">RONFLEX</div>
           <div class="stat">Health: ??</div>
           <div class="stat">Attack: ??</div>
           <div class="stat">Defense: ??</div>
@@ -81,7 +89,6 @@ try {
       <div class="pokemon">
         <div class="Img"><a href='./inventory.php?value=2'><img src="./gif-sprite/arcaninStarter.svg" alt=""></a></div>
         <div class="statCont">
-          <div class="namePkm">ARCANIN</div>
           <div class="stat">Health: ??</div>
           <div class="stat">Attack: ??</div>
           <div class="stat">Defense: ??</div>
@@ -91,7 +98,6 @@ try {
       <div class="pokemon">
         <div class="Img"><a href='./inventory.php?value=3'><img src="./gif-sprite/geratinaStarter.svg" alt=""></a></div>
         <div class="statCont">
-          <div class="namePkm">GERATINA</div>
           <div class="stat">Health: ??</div>
           <div class="stat">Attack: ??</div>
           <div class="stat">Defense: ??</div>
@@ -103,7 +109,6 @@ try {
       <div class="pokemon">
         <div class="Img"><a href='./inventory.php?value=4'><img src="./gif-sprite/mewStarter.svg" alt=""></a></div>
         <div class="statCont">
-          <div class="namePkm">MEW</div>
           <div class="stat">Health: ??</div>
           <div class="stat">Attack: ??</div>
           <div class="stat">Defense: ??</div>
@@ -113,7 +118,6 @@ try {
       <div class="pokemon">
         <div class="Img"><a href='./inventory.php?value=5'><img src="./gif-sprite/pikachuStarter.svg" alt=""></a></div>
         <div class="statCont">
-          <div class="namePkm">PIKACHU</div>
           <div class="stat">Health: ??</div>
           <div class="stat">Attack: ??</div>
           <div class="stat">Defense: ??</div>
@@ -123,7 +127,6 @@ try {
       <div class="pokemon">
         <div class="Img"><a href='./inventory.php?value=6'><img src="./gif-sprite/jungkoStarter.svg" alt=""></a></div>
         <div class="statCont">
-          <div class="namePkm">JUNGKO</div>
           <div class="stat">Health: ??</div>
           <div class="stat">Attack: ??</div>
           <div class="stat">Defense: ??</div>
@@ -134,9 +137,10 @@ try {
   </div>
 
 
+  <script src="./profil.js"></script>
+  <script src="./audio.js"></script>
 
 
-  <!-- <script src="profil.js"> </script> -->
 </body>
 
 </html>

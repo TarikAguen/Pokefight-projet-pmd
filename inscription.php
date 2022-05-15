@@ -105,17 +105,23 @@ if ($_POST) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./reset.css" rel="stylesheet">
+  <link href="./style/reset.css" rel="stylesheet">
   <link href="./inscription.css" rel="stylesheet">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27');
   </style>
-  <script src="./main.js"></script>
+  <!-- <script src="./main.js"></script> -->
   <title>Inscription</title>
 </head>
 
 <body>
+  <div class=audioCont> <audio id="audio" class="audio">
+      <source src="./song/ost.mp3" type="audio/mpeg">
+    </audio>
+    <button class="playPauseBTN" id="playPauseBTN" onclick="playPause()">Listen</button>
+  </div>
+
 
   <div class="logoCont">
     <img src="./images/pokefight-logo.svg" alt="logo">
@@ -130,7 +136,7 @@ if ($_POST) {
       </div>
       <br><br>
       <div class="Pseudo">
-        <label for="mdp">Mot de passe</label>
+        <label for="mdp">Password</label>
         <input type="password" name="mdp" id="mdp" required>
       </div>
       <br><br>
@@ -147,8 +153,10 @@ if ($_POST) {
   </div>
 
   <div class="dejaInscris">
-    <a class="memberConnexion" href="connexion.php">Déjà inscrit ?</a>
+    <a class="memberConnexion" href="connexion.php">Already registered ?</a>
   </div>
 </body>
+
+<script src="./audio.js"></script>
 
 </html>

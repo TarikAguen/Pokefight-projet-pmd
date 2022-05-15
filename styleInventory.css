@@ -9,7 +9,12 @@ body {
   overflow: hidden;
   gap: 2.5rem;
 }
-
+.ranking {
+  margin-top: 20px;
+  margin-right: 50%;
+  width: 100px;
+  height: 100px;
+}
 .myPokemon {
   display: flex;
   justify-content: center;

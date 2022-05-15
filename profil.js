@@ -13,17 +13,30 @@ function typeEffect(element, speed) {
   }, speed);
 }
 
-// application
-let speed = 100;
-let h1 = document.querySelector("h1");
-let p = document.querySelector("p");
-let delay = h1.innerHTML.length * speed + speed;
+var speed = 100;
+var h1 = document.querySelector("h1");
+var p = document.querySelector("p");
+var delay = h1.innerHTML.length * speed + speed;
 
-// type affect to header
 typeEffect(h1, speed);
 
-// type affect to body
 setTimeout(function () {
   p.style.display = "inline-block";
   typeEffect(p, speed);
 }, delay);
+
+var audio = document.getElementById("audio");
+var playPauseBTN = document.getElementById("playPauseBTN");
+var count = 0;
+
+function playPause() {
+  if (count == 0) {
+    count = 1;
+    audio.play();
+    playPauseBTN.innerHTML = "Pause";
+  } else {
+    count = 0;
+    audio.pause();
+    playPauseBTN.innerHTML = "Listen";
+  }
+}

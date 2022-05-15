@@ -209,3 +209,15 @@ h1 {
   border-style: dashed;
   border-radius: 5px;
 }
+
+#playPauseBTN {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: none;
+  font-size: 10px;
+  color: white;
+  border: none;
+  font-family: "Press Start 2P";
+  cursor: pointer;
+}

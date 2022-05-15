@@ -1,82 +1,127 @@
 body {
-    background: conic-gradient(from 180deg at 50% 50%, #000000 -16.88deg, #000000 3.75deg, #000000 56.25deg, #413F3F 90deg, #000000 143.27deg, #000000 172.23deg, #000000 215.88deg, #413F3F 270.42deg, #000000 307.5deg, #000000 343.12deg, #000000 363.75deg);
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    font-family: 'Press Start 2P', regular;
-    height: 100vh;
-    width: 100vwh;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #000000 -16.88deg,
+    #000000 3.75deg,
+    #000000 56.25deg,
+    #413f3f 90deg,
+    #000000 143.27deg,
+    #000000 172.23deg,
+    #000000 215.88deg,
+    #413f3f 270.42deg,
+    #000000 307.5deg,
+    #000000 343.12deg,
+    #000000 363.75deg
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "Press Start 2P", regular;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
 }
 
 .versus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 265px;
-    flex-direction: column;
-    color: red;
-    font-size: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 265px;
+  flex-direction: column;
+  color: red;
+  font-size: 96px;
 }
 
 .next {
-    color: white;
-    font-size: 32px;
+  position: absolute;
+  top: 500px;
+  right: 200px;
+  color: white;
+  font-size: 32px;
+  text-decoration: none;
 }
 
 .test {
-    background-color: chartreuse;
+  background-color: chartreuse;
 }
 
 .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
 }
 
 .contenaire_ball {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ball {
-    height: 165px;
-    width: 211px;
-    opacity: 0;
-    animation: chargement 1.2s linear infinite;
+  height: 165px;
+  width: 211px;
+  opacity: 0;
+  animation: chargement 1.2s linear infinite;
 }
 
 @keyframes chargement {
-    0% {
-        opacity: 0;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .ball:nth-child(1) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .ball:nth-child(2) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .ball:nth-child(3) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .fondu-out {
-    opacity: 0;
-    transition: 0.4s ease-out;
+  opacity: 0;
+  transition: 0.4s ease-out;
+}
+.pkmPlacement {
+  margin-top: 90px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.alliePkm {
+  /* margin-left: 400px;
+  margin-top: 60px; */
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.enemyPkm {
+  /* margin-left: 900px;
+  margin-top: 60px; */
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
 }

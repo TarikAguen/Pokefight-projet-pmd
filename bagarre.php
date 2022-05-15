@@ -44,11 +44,9 @@ try {
     //     echo
     // }
     // print_r($pkmFetch);
-    print_r($pkmFetch[0]['id_pokemon']);
+    // print_r($pkmFetch[0]['id_pokemon']);
 
     //echo "Connecté à $dbname sur $host avec succès.";
-
-
 
 } catch (PDOException $e) {
 
@@ -88,39 +86,60 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style/reset.css" rel="stylesheet">
     <link href="/style/bagarre.css" rel="stylesheet">
-    <script src="./main.js" defer></script>
+    <script type="text/javascript" src="../main.js" defer></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27');
+    </style>
     <title>Bagarre</title>
 </head>
 
 <body>
+    <div class=audioCont> <audio id="audio" class="audio">
+            <source src="./song/ost.mp3" type="audio/mpeg">
+        </audio>
+        <button class="playPauseBTN" id="playPauseBTN" onclick="playPause()">Listen</button>
+    </div>
+
+
+
     <div class="battleBoard">
+        <div class="hp">
+            <div class="currentHpEnemy">
+                <?php echo $_SESSION['pseudo'] ?>
+            </div>
+            <div class="currentHpJoueur">
+                <p>Quoi-feur</p>
+            </div>
+
+        </div>
         <div><span class="timer" id="time">3</span></div>
         <div class="playerCharacter" id="playerCharacter">
             <?php
-
             switch ($pkmFetch[0]['id_pokemon']) {
-                case 1;
-                    echo '<img src="../gif-sprite/ronflexStart.gif" alt="" />';
+                case '1';
+                    echo '<img src="../gif-sprite/ronron.gif" alt="" width="200px" height="200px" />';
                     break;
 
-                case 2;
-                    echo '<img src="./gif-sprite/arcaninStart.gif" alt="" />';
+                case '2';
+                    echo '<p class="namePkm">Arcanin</p>';
+                    echo '<img src="../gif-sprite/arcaninGif.gif" alt="" width="200px" height="200px"/>';
                     break;
 
-                case 3;
-                    echo '<img src="../gif-sprite/geratinaStart.gif" alt="" />';
+                case '3';
+                    echo '<img src="../gif-sprite/geratinaStart.gif" alt="" width="200px" height="200px" />';
                     break;
 
-                case 4;
-                    echo '<img src="../gif-sprite/mewStart.gif" alt="" />';
+                case '4';
+                    echo '<img src="../gif-sprite/mewGif.gif" alt="" width="200px" height="200px" />';
                     break;
 
-                case 5;
-                    echo '<img src="../gif-sprite/pikachuStart.gif" alt="" />';
+                case '5';
+                    echo '<img src="../gif-sprite/pikachuGif.gif" alt="" width="200px" height="200px" />';
                     break;
 
-                case 6;
-                    echo '<img src="../gif-sprite/jungkoStart.gif" alt="" />';
+                case '6';
+                    echo '<img src="../gif-sprite/jungkoGif" alt="" width="200px" height="200px"/>';
                     break;
             }
 
@@ -128,9 +147,37 @@ try {
         </div>
         <div class="enemyCharacter" id="enemyCharacter">
             <?php
-            echo '<img src="../gif-sprite/morsay.svg" alt="" width="300px" height="300px" />';
+            switch ($pkmFetch[0]['id_pokemon']) {
+                case '1';
+                    echo 'Ronflex';
+                    echo '<img src="../gif-sprite/ronron.gif" alt="" width="200px" height="200px" />';
+                    break;
 
+                case '2';
+                    echo '<p class="namePkm">Arcanin</p>';
+                    echo '<img src="../gif-sprite/arcaninGif.gif" alt="" width="200px" height="200px"/>';
+                    break;
 
+                case '3';
+                    echo 'Giratina';
+                    echo '<img src="../gif-sprite/geratinaStart.gif" alt="" width="200px" height="200px" />';
+                    break;
+
+                case '4';
+                    echo 'Mew';
+                    echo '<img src="." alt="" width="200px" height="200px" />';
+                    break;
+
+                case '5';
+                    echo 'Pikachu';
+                    echo '<img src="../gif-sprite/pikachuGif.gif" alt="" width="200px" height="200px" />';
+                    break;
+
+                case '6';
+                    echo 'Jungko';
+                    echo '<img src="../gif-sprite/jungkoGif" alt="" width="200px" height="200px"/>';
+                    break;
+            }
             ?>
         </div>
 
@@ -138,7 +185,8 @@ try {
     </div>
 
 
-
 </body>
+<!-- <script src="../Pokefight/audio.js"></script> -->
+
 
 </html>

@@ -68,7 +68,6 @@ if ($_POST) {
   <title>Connexion</title>
 
 
-  <link href="./connexion/connexion.css" rel="stylesheet">
   <link href="./connexion.css" rel="stylesheet">
 
   <style>
@@ -78,7 +77,12 @@ if ($_POST) {
 </head>
 
 <body>
-  <img src="./images/BeagleBros-Note.png" class="music" alt="">
+  <div class=audioCont> <audio id="audio">
+      <source src="./song/ost.mp3" type="audio/mpeg">
+    </audio>
+    <button id="playPauseBTN" onclick="playPause()">Listen</button>
+  </div>
+
 
 
   <div class="logoCont">
